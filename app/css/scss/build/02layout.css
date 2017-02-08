@@ -1,0 +1,20 @@
+.portermail {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+  .portermail header {
+    width: 100vw;
+    height: 55px; }
+  .portermail aside {
+    width: 250px;
+    background-color: #bdbdbd; }
+  .portermail > div.main {
+    width: 100vw;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row; }
+    .portermail > div.main main {
+      flex-grow: 1;
+      background-color: #f0f0f0; }
+
+/*# sourceMappingURL=02layout.css.map */

@@ -1,0 +1,180 @@
+$width: 150px;
+$height: $width * 1.4;
+$handle-width: $width / 3;
+$handle-height: $height / 2;
+$handle-div: 2;
+$beer-width: $width * 0.8;
+$beer-height: $height * 0.8;
+$bubble-size: $width / 6;
+$bubble-speed: 600ms;
+
+
+$bg-color: rgba(255, 255, 255, 0.4);
+// $beer-color: rgba(53, 9, 10, 0.9);
+$beer-color: rgba(0, 0, 0, 0.8);
+
+// body{
+//     overflow: hidden;
+//     height: 100vh;
+//     background-color: #222;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+.mug {
+    position: relative;
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    border-radius: $width / 20;
+    
+    .handle {
+        position: absolute;
+        top: ($height - $handle-height);
+        right: 0;
+        
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: $handle-width;
+            height: $handle-height / 2;
+        }
+        
+        &::before {
+            bottom: 0;
+            border-top: solid ($handle-width / $handle-div) $bg-color;
+            border-right: solid ($handle-width / $handle-div) $bg-color;
+            border-top-right-radius: $handle-width;
+        }
+        
+        &::after {
+            top: 0;
+            border-bottom: solid ($handle-width / $handle-div) $bg-color;
+            border-right: solid ($handle-width / $handle-div) $bg-color;
+            border-bottom-right-radius: $handle-width;
+        }
+    }
+    
+    .beer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: ($width - $beer-width) / 2;
+        margin: auto;
+        height: $beer-height;
+        width: $beer-width;
+        border-bottom-left-radius: $width / 30;
+        border-bottom-right-radius: $width / 30;
+        
+        .bubble {
+            position: absolute;
+            left: 0;
+            background-color: $bg-color;
+            border-radius: 100%;
+            
+            &:nth-of-type(1){
+                top: 20%;
+                height: $bubble-size;
+                width: $bubble-size;
+                animation: $bubble-speed bubbler ease-in infinite;
+            }
+            &:nth-of-type(2){
+                top: 40%;
+                height: $bubble-size / 2;
+                width: $bubble-size / 2;
+                animation: $bubble-speed * 2 bubbler ease-in infinite;
+            }
+            &:nth-of-type(3){
+                top: 50%;
+                height: $bubble-size / 1.4;
+                width: $bubble-size / 1.4;
+                animation: $bubble-speed * 1.7 bubbler ease-in infinite;
+            }
+            &:nth-of-type(4){
+                top: 5%;
+                height: $bubble-size / 1.1;
+                width: $bubble-size / 1.1;
+                animation: $bubble-speed * 2.3 bubbler ease-in infinite;
+            }
+            &:nth-of-type(5){
+                top: 70%;
+                height: $bubble-size / 2.4;
+                width: $bubble-size / 2.4;
+                animation: $bubble-speed * 2.6 bubbler ease-in infinite;
+            }
+            &:nth-of-type(6){
+                top: 80%;
+                height: $bubble-size / 1.1;
+                width: $bubble-size / 1.1;
+                animation: $bubble-speed * 1.3 bubbler ease-in infinite ($bubble-speed * 0.8);
+            }
+        }
+    }
+}
+
+@keyframes bubbler {
+    from {
+        opacity: 1;
+        left: 0;
+    }
+    to {
+        opacity: 0;
+        left: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+    transform: rotate(-90deg);
+}
+
+#nprogress .bar {
+  background: $beer-color;
+
+  position: absolute;
+  z-index: 1031;
+  top: -$beer-width / 2;
+  left: -$beer-width;
+
+  width: $beer-height;
+  height: $beer-width;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  // display: block;
+  // position: absolute;
+  // right: 0px;
+  // width: 100px;
+  // height: 100%;
+  // box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  // opacity: 1.0;
+
+  // -webkit-transform: rotate(3deg) translate(0px, -4px);
+  //     -ms-transform: rotate(3deg) translate(0px, -4px);
+  //         transform: rotate(3deg) translate(0px, -4px);
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}

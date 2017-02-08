@@ -1,0 +1,37 @@
+{
+  "name": "portermail",
+  "version": "1.0.0",
+  "description": "An email front end web client built using PorterJS",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "nunjucks": "^3.0.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jshint-stylish": "^2.2.1",
+    "matchdep": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ahopkins/portermail.git"
+  },
+  "keywords": [
+    "email-client",
+    "javascript",
+    "porterjs"
+  ],
+  "author": "Adam Hopkins <adam@optymizer.com> (https://optymizer.com/company/team/adam/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ahopkins/portermail/issues"
+  },
+  "homepage": "https://github.com/ahopkins/portermail#readme"
+}

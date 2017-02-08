@@ -1,0 +1,14 @@
+@import "00colors.scss";
+
+.portermail {
+    .compose {
+        display: block;
+        text-align: center;
+        background-color: $near-black;
+        color: $light-grey;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        padding: 0.8em;
+    }
+}

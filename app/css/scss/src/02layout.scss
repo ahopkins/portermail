@@ -1,0 +1,32 @@
+@import "00colors.scss";
+@import "00variables.scss";
+
+.portermail {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+
+    header {
+        width: 100vw;
+        height: $header-height;
+    }
+    aside {
+        width: $aside-width;
+        background-color: $light-grey;
+    }
+    > div.main {
+        width: 100vw;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+    
+        nav {
+        }
+
+        main {
+            flex-grow: 1;
+            background-color: $near-white;
+        }
+    }
+}
