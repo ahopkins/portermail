@@ -1,0 +1,9 @@
+# npm
+node_modules
+logs
+.npmignore
+
+# sphinx
+_build
+
+NOTES
