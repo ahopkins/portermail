@@ -3,7 +3,6 @@ node_modules
 logs
 .npmignore
 
-# sphinx
-_build
+.sass-cache
 
 NOTES
