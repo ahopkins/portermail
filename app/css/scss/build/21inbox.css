@@ -1,0 +1,83 @@
+.portermail .envelope {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 35px;
+  width: 46.66667px;
+  position: relative;
+  display: inline-block; }
+  .portermail .envelope::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 23.33333px 23.33333px 0 23.33333px;
+    border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent; }
+  .portermail .envelope .flap {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 23.33333px 23.33333px 0 23.33333px;
+    border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent;
+    transition: all 400ms ease-out;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    z-index: 1; }
+
+.portermail .email-list {
+  padding: 1rem; }
+  .portermail .email-list section {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    margin: 1rem 0; }
+  .portermail .email-list .badge::after {
+    background-color: #bdbdbd; }
+  .portermail .email-list .new .flap {
+    border-color: #fd7c36 transparent transparent transparent; }
+  .portermail .email-list .new .badge::after {
+    background-color: #FD5B03; }
+  .portermail .email-list .read .flap {
+    border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent !important;
+    transform: rotateX(180deg); }
+  .portermail .email-list .unread {
+    font-weight: 500; }
+    .portermail .email-list .unread .envelope {
+      background-color: rgba(0, 0, 0, 0.1); }
+.portermail .email-wrapper {
+  padding: 23.33333px 1rem;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  border-color: #f0f0f0; }
+  .portermail .email-wrapper:last-of-type {
+    border-width: 1px; }
+.portermail .email-display {
+  display: flex;
+  flex-direction: row; }
+  .portermail .email-display .status {
+    font-size: 35px; }
+  .portermail .email-display .name {
+    width: 240px;
+    padding-left: 1rem;
+    padding-right: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 35px; }
+    .portermail .email-display .name::after {
+      top: 1em;
+      right: 0; }
+  .portermail .email-display .text {
+    line-height: 35px;
+    padding: 0 1rem;
+    flex-grow: 1; }
+    .portermail .email-display .text p {
+      margin: 0; }
+  .portermail .email-display .date {
+    flex-grow: 0;
+    padding: 0 1rem; }
+.portermail .email-details {
+  display: none; }
+
+/*# sourceMappingURL=21inbox.css.map */

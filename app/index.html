@@ -2,17 +2,35 @@
 <html>
 <head>
     <title>PorterMail</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="http://127.0.0.1:3333/css/porter.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|Source+Code+Pro" rel="stylesheet">
     <link rel="stylesheet" href="/css/portermail.css">
     <link rel="stylesheet" href="https://file.myfontastic.com/3uYZDYqqdtc5J2DkNP89aT/icons.css">
+    
+    <!-- Initializing - must come before porter.min.js -->
+    <script type="text/javascript" src="/js/portermail.init.js"></script>
+    <!-- Main script - can be in header or footer -->
     <script type="text/javascript" src="http://localhost:8181/assets/porter.min.js"></script>
+    <!-- For extra flare -->
     <script type="text/javascript" src="http://localhost:3333/js/robust.porter.min.js"></script>
+    <!-- Template engine -->
     <script src="/assets/nunjucks.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+
 </head>
+
 <body class="portermail"></body>
-<script>
-    var app = nunjucks.render('/templates/layouts/base.html');
-    p.one('.portermail').innerHTML = app;
-</script>
+
+<!-- Run time script -->
+<script type="text/javascript" src="/js/portermail.render.js"></script>
+
+<!-- Prepare views -->
+<script type="text/javascript" src="/js/portermail.views.js"></script>
+
+<!-- Build routes -->
+<script type="text/javascript" src="/js/portermail.routes.js"></script>
 </html>

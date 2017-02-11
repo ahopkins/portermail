@@ -1,0 +1,40 @@
+.horizontal-wrapper {
+  width: 100%; }
+
+.horizontal-center {
+  text-align: center; }
+
+.vertical-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.portermail .dashboard-details {
+  display: flex; }
+  .portermail .dashboard-details .number {
+    margin-bottom: 5rem; }
+    .portermail .dashboard-details .number span {
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgba(0, 0, 0, 0.4); }
+    .portermail .dashboard-details .number strong {
+      display: block;
+      font-size: 12rem; }
+    .portermail .dashboard-details .number p {
+      margin: 0; }
+      .portermail .dashboard-details .number p em {
+        display: inline-block;
+        font-style: normal;
+        font-weight: 600;
+        transform: scale(1.5);
+        color: #41A85F;
+        margin: 0 0.85rem; }
+        .portermail .dashboard-details .number p em.negative {
+          color: #B8312F; }
+          .portermail .dashboard-details .number p em.negative.negative::before {
+            content: '('; }
+          .portermail .dashboard-details .number p em.negative.negative::after {
+            content: ')'; }
+
+/*# sourceMappingURL=dashboard.css.map */

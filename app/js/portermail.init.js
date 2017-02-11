@@ -1,0 +1,3 @@
+PorterConfig = {
+    render: 'client'
+};

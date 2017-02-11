@@ -1,0 +1,56 @@
+.horizontal-wrapper { width: 100%;}
+.horizontal-center {
+    text-align: center;
+}
+.vertical-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+// 
+
+.portermail {
+    .dashboard-details {
+        display: flex;
+
+        .number {
+            margin-bottom: 5rem;
+
+            span {
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: rgba(0, 0, 0, 0.4);
+            }
+
+            strong {
+                display: block;
+                font-size: 12rem;
+            }
+
+            p {
+                margin: 0;
+
+                em {
+                    display: inline-block;
+                    font-style: normal;
+                    font-weight: 600;
+                    transform: scale(1.5);
+                    color: #41A85F;
+                    margin: 0 0.85rem;
+
+                    &.negative {
+                        color: #B8312F;
+                        &.negative::before {
+                            content: '(';
+                        }
+                        &.negative::after {
+                            content: ')';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

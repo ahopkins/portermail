@@ -1,0 +1,9 @@
+.badge::after {
+  top: 1em;
+  right: 0.5em;
+  color: #f0f0f0; }
+
+i.none {
+  opacity: 0; }
+
+/*# sourceMappingURL=50fixes.css.map */

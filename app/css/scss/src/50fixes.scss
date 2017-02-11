@@ -1,0 +1,9 @@
+@import "00colors.scss";
+
+.badge::after {
+    top: 1em;
+    right: 0.5em;
+    color: $near-white;
+}
+
+i.none { opacity: 0; }
