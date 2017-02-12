@@ -8,7 +8,14 @@ $near-white: #f0f0f0;
 $black: #000;
 $near-black: #222;
 
-$primary: #FD5B03;
+$red: #fd0328;
+$yellow: #fdd803;
+$purple: #5b03fd;
+$green: #03fd5b;
+$orange: #FD5B03;
+
+$primary: $orange;
+$light-primary: lighten($orange, 30%);
 
 $checked-color: $primary;
 $unchecked-color: $grey;

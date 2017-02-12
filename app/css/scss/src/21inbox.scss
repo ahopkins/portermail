@@ -4,6 +4,7 @@ $color: rgba(0, 0, 0, 0.1);
 $height: 35px;
 $width: $height * 4/3;
 $flap: lighten(#FD5B03, 10%);
+$flap-speed: 250ms;
 
 .portermail .envelope {
   background-color: $color;
@@ -34,7 +35,7 @@ $flap: lighten(#FD5B03, 10%);
     border-style: solid;
     border-width: $height/1.5 $height/1.5 0 $height/1.5;
     border-color: darken($color, 60%) transparent transparent transparent;
-    transition: all 400ms ease-out;
+    transition: all $flap-speed ease-out;
       transform-style: preserve-3d;  
     transform-origin: top center;
     z-index: 1;
@@ -44,6 +45,24 @@ $flap: lighten(#FD5B03, 10%);
 $name-width: 240px;
 
 .portermail {
+    .email-actions {
+        margin: 0 1rem;
+
+        ul:first-of-type {
+            display: flex;
+        }
+
+        li {
+            // margin: 0 0.4rem;
+
+            &:not(:last-of-type)::after {
+                content: '|';
+                display: inline-block;
+                margin: 0 0.4rem;
+            }
+        }
+    }
+
     .email-list {
         padding: 1rem;
 
@@ -109,6 +128,20 @@ $name-width: 240px;
 
         .status {
             font-size: $height;
+
+            .p-action {
+                color: $near-black;
+            }
+            .p-information {
+                color: $light-grey;
+            }
+            .p-circle {
+                color: $white;
+            }
+
+            i:hover {
+                color: $light-primary;
+            }
         }
 
         .name {
@@ -121,6 +154,7 @@ $name-width: 240px;
             line-height: $height;
 
             &::after {
+                line-height: .8rem;
                 top: 1em;
                 right: 0;
             }
@@ -146,6 +180,20 @@ $name-width: 240px;
         .date {
             flex-grow: 0;
             padding: 0 1rem;
+        }
+
+        .actions {
+            a {
+                color: $light-grey;
+                padding: 1rem;
+                i {
+                    font-size: 2rem;
+                }
+
+                &:hover {
+                    color: $primary;
+                }
+            }
         }
     }
 

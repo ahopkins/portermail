@@ -21,11 +21,19 @@
     border-style: solid;
     border-width: 23.33333px 23.33333px 0 23.33333px;
     border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent;
-    transition: all 400ms ease-out;
+    transition: all 250ms ease-out;
     transform-style: preserve-3d;
     transform-origin: top center;
     z-index: 1; }
 
+.portermail .email-actions {
+  margin: 0 1rem; }
+  .portermail .email-actions ul:first-of-type {
+    display: flex; }
+  .portermail .email-actions li:not(:last-of-type)::after {
+    content: '|';
+    display: inline-block;
+    margin: 0 0.4rem; }
 .portermail .email-list {
   padding: 1rem; }
   .portermail .email-list section {
@@ -57,6 +65,14 @@
   flex-direction: row; }
   .portermail .email-display .status {
     font-size: 35px; }
+    .portermail .email-display .status .p-action {
+      color: #222; }
+    .portermail .email-display .status .p-information {
+      color: #bdbdbd; }
+    .portermail .email-display .status .p-circle {
+      color: #fff; }
+    .portermail .email-display .status i:hover {
+      color: #febe9b; }
   .portermail .email-display .name {
     width: 240px;
     padding-left: 1rem;
@@ -66,6 +82,7 @@
     text-overflow: ellipsis;
     line-height: 35px; }
     .portermail .email-display .name::after {
+      line-height: .8rem;
       top: 1em;
       right: 0; }
   .portermail .email-display .text {
@@ -77,6 +94,13 @@
   .portermail .email-display .date {
     flex-grow: 0;
     padding: 0 1rem; }
+  .portermail .email-display .actions a {
+    color: #bdbdbd;
+    padding: 1rem; }
+    .portermail .email-display .actions a i {
+      font-size: 2rem; }
+    .portermail .email-display .actions a:hover {
+      color: #FD5B03; }
 .portermail .email-details {
   display: none; }
 

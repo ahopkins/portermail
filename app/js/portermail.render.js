@@ -13,21 +13,21 @@ var data = {
             21
         ],
         backgroundColor: [
-            "#4d4d4d",
-            "#4d4d4d",
-            "#4d4d4d",
-            "#4d4d4d",
-            "#4d4d4d",
+            "#fd0328",
+            "#fdd803",
+            "#5b03fd",
+            "#03fd5b",
+            "#FD5B03",
             "#4d4d4d"
         ],
-        hoverBackgroundColor: [
-            "#FD5B03",
-            "#FD5B03",
-            "#FD5B03",
-            "#FD5B03",
-            "#FD5B03",
-            "#FD5B03"
-        ],
+        // hoverBackgroundColor: [
+        //     "#FD5B03",
+        //     "#FD5B03",
+        //     "#FD5B03",
+        //     "#FD5B03",
+        //     "#FD5B03",
+        //     "#FD5B03"
+        // ],
         label: 'My dataset' // for legend
     }],
     labels: [

@@ -11,13 +11,13 @@
 
 .portermail .dashboard-details {
   display: flex; }
+  .portermail .dashboard-details h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.4); }
   .portermail .dashboard-details .number {
     margin-bottom: 5rem; }
-    .portermail .dashboard-details .number span {
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: rgba(0, 0, 0, 0.4); }
     .portermail .dashboard-details .number strong {
       display: block;
       font-size: 12rem; }
@@ -28,13 +28,7 @@
         font-style: normal;
         font-weight: 600;
         transform: scale(1.5);
-        color: #41A85F;
+        color: #222;
         margin: 0 0.85rem; }
-        .portermail .dashboard-details .number p em.negative {
-          color: #B8312F; }
-          .portermail .dashboard-details .number p em.negative.negative::before {
-            content: '('; }
-          .portermail .dashboard-details .number p em.negative.negative::after {
-            content: ')'; }
 
 /*# sourceMappingURL=20dashboard.css.map */

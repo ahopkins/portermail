@@ -1,13 +1,14 @@
 <div class="email-list">
     <section>
         <h4>Today</h4>
+        {% include "templates/components/inbox/email-action-bar.html" %}
         <div class="email-wrapper new unread" id="email-1">
             <div class="email-display">
                 <div class="status">
                     <div class="envelope toggler new" data-target="email-1" data-class="unread read">
                         <div class="flap"></div>
                     </div>
-                    <i class="p-circle none"></i>
+                    <i class="p-circle"></i>
                 </div>
                 <div class="name badge" data-badge="4">
                     John Doe
@@ -17,6 +18,9 @@
                 </div>
                 <div class="date">
                     17 minutes ago
+                </div>
+                <div class="actions">
+                    <a href="#"><i class="p-snooze"></i></a>
                 </div>
                 <div class="checker">
                     <input type="checkbox" id="select-1">
@@ -45,6 +49,9 @@
                 <div class="date">
                     25 minutes ago
                 </div>
+                <div class="actions">
+                    <a href="#"><i class="p-snooze"></i></a>
+                </div>
                 <div class="checker">
                     <input type="checkbox" id="select-2">
                     <label for="select-2"></label>
@@ -72,6 +79,9 @@
                 <div class="date">
                     1 hour ago
                 </div>
+                <div class="actions">
+                    <a href="#"><i class="p-snooze"></i></a>
+                </div>
                 <div class="checker">
                     <input type="checkbox" id="select-3">
                     <label for="select-3"></label>
@@ -86,6 +96,7 @@
 
     <section>
         <h4>Yesterday</h4>
+        {% include "templates/components/inbox/email-action-bar.html" %}
         <div class="email-wrapper read" id="email-4">
             <div class="email-display">
                 <div class="status">
@@ -101,6 +112,9 @@
                 </div>
                 <div class="date">
                     1 day ago
+                </div>
+                <div class="actions">
+                    <a href="#"><i class="p-snooze"></i></a>
                 </div>
                 <div class="checker">
                     <input type="checkbox" id="select-4">

@@ -1,0 +1,11 @@
+@import "00colors.scss";
+
+.portermail .negative {
+    color: $red !important;
+    &::before { content: '('; }
+    &::after { content: ')'; }
+}
+
+.toggler { cursor: pointer; }
+
+.vertical-align-middle { vertical-align: middle; }

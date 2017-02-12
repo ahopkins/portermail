@@ -1,0 +1,14 @@
+.portermail .negative {
+  color: #fd0328 !important; }
+  .portermail .negative::before {
+    content: '('; }
+  .portermail .negative::after {
+    content: ')'; }
+
+.toggler {
+  cursor: pointer; }
+
+.vertical-align-middle {
+  vertical-align: middle; }
+
+/*# sourceMappingURL=31helpers.css.map */

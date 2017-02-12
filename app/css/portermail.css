@@ -53,16 +53,9 @@ a {
   color: #FD5B03; }
 
 /*# sourceMappingURL=03general.css.map */
-/*file*/.portermail .searchbar {
-  background-color: #fff;
-  border: 0;
-  display: block;
-  height: 55px;
-  width: 100vw;
-  padding: 0 1vw;
-  outline: 0; }
+/*file*/
 
-/*# sourceMappingURL=10elements.css.map */
+/*# sourceMappingURL=04typography.css.map */
 /*file*/.portermail .searchbar {
   background-color: #fff;
   border: 0;
@@ -250,13 +243,13 @@ label.checked {
 
 .portermail .dashboard-details {
   display: flex; }
+  .portermail .dashboard-details h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.4); }
   .portermail .dashboard-details .number {
     margin-bottom: 5rem; }
-    .portermail .dashboard-details .number span {
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: rgba(0, 0, 0, 0.4); }
     .portermail .dashboard-details .number strong {
       display: block;
       font-size: 12rem; }
@@ -267,14 +260,8 @@ label.checked {
         font-style: normal;
         font-weight: 600;
         transform: scale(1.5);
-        color: #41A85F;
+        color: #222;
         margin: 0 0.85rem; }
-        .portermail .dashboard-details .number p em.negative {
-          color: #B8312F; }
-          .portermail .dashboard-details .number p em.negative.negative::before {
-            content: '('; }
-          .portermail .dashboard-details .number p em.negative.negative::after {
-            content: ')'; }
 
 /*# sourceMappingURL=20dashboard.css.map */
 /*file*/.portermail .envelope {
@@ -300,11 +287,19 @@ label.checked {
     border-style: solid;
     border-width: 23.33333px 23.33333px 0 23.33333px;
     border-color: rgba(0, 0, 0, 0.1) transparent transparent transparent;
-    transition: all 400ms ease-out;
+    transition: all 250ms ease-out;
     transform-style: preserve-3d;
     transform-origin: top center;
     z-index: 1; }
 
+.portermail .email-actions {
+  margin: 0 1rem; }
+  .portermail .email-actions ul:first-of-type {
+    display: flex; }
+  .portermail .email-actions li:not(:last-of-type)::after {
+    content: '|';
+    display: inline-block;
+    margin: 0 0.4rem; }
 .portermail .email-list {
   padding: 1rem; }
   .portermail .email-list section {
@@ -336,6 +331,14 @@ label.checked {
   flex-direction: row; }
   .portermail .email-display .status {
     font-size: 35px; }
+    .portermail .email-display .status .p-action {
+      color: #222; }
+    .portermail .email-display .status .p-information {
+      color: #bdbdbd; }
+    .portermail .email-display .status .p-circle {
+      color: #fff; }
+    .portermail .email-display .status i:hover {
+      color: #febe9b; }
   .portermail .email-display .name {
     width: 240px;
     padding-left: 1rem;
@@ -345,6 +348,7 @@ label.checked {
     text-overflow: ellipsis;
     line-height: 35px; }
     .portermail .email-display .name::after {
+      line-height: .8rem;
       top: 1em;
       right: 0; }
   .portermail .email-display .text {
@@ -356,6 +360,13 @@ label.checked {
   .portermail .email-display .date {
     flex-grow: 0;
     padding: 0 1rem; }
+  .portermail .email-display .actions a {
+    color: #bdbdbd;
+    padding: 1rem; }
+    .portermail .email-display .actions a i {
+      font-size: 2rem; }
+    .portermail .email-display .actions a:hover {
+      color: #FD5B03; }
 .portermail .email-details {
   display: none; }
 
@@ -463,6 +474,20 @@ label.checked {
   position: absolute; }
 
 /*# sourceMappingURL=30loader.css.map */
+/*file*/.portermail .negative {
+  color: #fd0328 !important; }
+  .portermail .negative::before {
+    content: '('; }
+  .portermail .negative::after {
+    content: ')'; }
+
+.toggler {
+  cursor: pointer; }
+
+.vertical-align-middle {
+  vertical-align: middle; }
+
+/*# sourceMappingURL=31helpers.css.map */
 /*file*/.badge::after {
   top: 1em;
   right: 0.5em;
@@ -472,43 +497,3 @@ i.none {
   opacity: 0; }
 
 /*# sourceMappingURL=50fixes.css.map */
-/*file*/.horizontal-wrapper {
-  width: 100%; }
-
-.horizontal-center {
-  text-align: center; }
-
-.vertical-wrapper {
-  height: 100%;
-  display: flex;
-  align-items: center; }
-
-.portermail .dashboard-details {
-  display: flex; }
-  .portermail .dashboard-details .number {
-    margin-bottom: 5rem; }
-    .portermail .dashboard-details .number span {
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: rgba(0, 0, 0, 0.4); }
-    .portermail .dashboard-details .number strong {
-      display: block;
-      font-size: 12rem; }
-    .portermail .dashboard-details .number p {
-      margin: 0; }
-      .portermail .dashboard-details .number p em {
-        display: inline-block;
-        font-style: normal;
-        font-weight: 600;
-        transform: scale(1.5);
-        color: #41A85F;
-        margin: 0 0.85rem; }
-        .portermail .dashboard-details .number p em.negative {
-          color: #B8312F; }
-          .portermail .dashboard-details .number p em.negative.negative::before {
-            content: '('; }
-          .portermail .dashboard-details .number p em.negative.negative::after {
-            content: ')'; }
-
-/*# sourceMappingURL=dashboard.css.map */
