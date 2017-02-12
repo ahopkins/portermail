@@ -30,5 +30,13 @@
         transform: scale(1.5);
         color: #222;
         margin: 0 0.85rem; }
+.portermail canvas {
+  filter: grayscale(1);
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out; }
+.portermail canvas:hover {
+  filter: grayscale(0); }
 
 /*# sourceMappingURL=20dashboard.css.map */

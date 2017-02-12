@@ -60,6 +60,20 @@
   border-color: #f0f0f0; }
   .portermail .email-wrapper:last-of-type {
     border-width: 1px; }
+  .portermail .email-wrapper .tags {
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start; }
+    .portermail .email-wrapper .tags span {
+      margin: 0 5px;
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+      background-color: #f0f0f0;
+      padding: 3px; }
+  .portermail .email-wrapper.selected, .portermail .email-wrapper:hover {
+    box-shadow: inset 0 0 0 2px #424242; }
+  .portermail .email-wrapper:hover .actions a {
+    color: #bdbdbd; }
 .portermail .email-display {
   display: flex;
   flex-direction: row; }
@@ -95,12 +109,12 @@
     flex-grow: 0;
     padding: 0 1rem; }
   .portermail .email-display .actions a {
-    color: #bdbdbd;
+    color: transparent;
     padding: 1rem; }
     .portermail .email-display .actions a i {
       font-size: 2rem; }
     .portermail .email-display .actions a:hover {
-      color: #FD5B03; }
+      color: #FD5B03 !important; }
 .portermail .email-details {
   display: none; }
 

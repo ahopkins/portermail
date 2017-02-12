@@ -120,6 +120,31 @@ $name-width: 240px;
             //             $eb  0    $eb -$eb #bdbdbd, // Right
             //             0    $eb  $eb -$eb #bdbdbd; // Bottom
         }
+
+        .tags {
+            margin: 0;
+            padding: 0;
+            justify-content: flex-start;
+
+            span {
+                margin: 0 5px;
+                font-size: 0.8rem;
+                line-height: 0.8rem;
+                background-color: $near-white;
+                padding: 3px;
+            }
+        }
+
+        &.selected,
+        &:hover {
+            box-shadow: inset 0 0 0 2px $dark-grey;
+        }
+
+        &:hover {
+            .actions a {
+                color: $light-grey;
+            }
+        }
     }
 
     .email-display {
@@ -184,14 +209,14 @@ $name-width: 240px;
 
         .actions {
             a {
-                color: $light-grey;
+                color: transparent;
                 padding: 1rem;
                 i {
                     font-size: 2rem;
                 }
 
                 &:hover {
-                    color: $primary;
+                    color: $primary !important;
                 }
             }
         }

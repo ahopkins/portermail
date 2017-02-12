@@ -22,6 +22,46 @@ module.exports = function(grunt){
                     livereload: 35729,
                     open: {
                         target: 'http://localhost:9000'
+                    },
+                    middleware: function (connect, options, middlewares) {
+                        
+                        middlewares.push(function(req, res, next) {
+                            if(req.url!='' && req.url!='/') {
+                                var http = require('http');
+
+
+                                var options = {
+                                    host: 'localhost',
+                                    port: '9000',
+                                    path: '/'
+                                }
+                                var request = http.request(options, function (result) {
+                                    // console.log(result);
+                                    var data = '';
+                                    result.on('data', function (chunk) {
+                                        data += chunk;
+                                        // // res.write(data);
+                                        // console.log(data);
+                                    });
+                                    result.on('end', function () {
+                                        // console.log(data);
+                                        res.write(data);
+                                        res.end();
+                                        return next();
+                                    });
+                                });
+                                request.on('error', function (e) {
+                                    console.log(e.message);
+                                });
+                                request.end();
+                                // res.writeHead(302,
+                                //   {Location: 'http://localhost:9000/:lll'}
+                                // );
+                                // res.params = '?p=q'
+                            }
+                        });
+
+                        return middlewares;
                     }
                 }       
             }

@@ -46,4 +46,15 @@
             }
         }
     }
+
+    canvas {
+        filter: grayscale(1);
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition:    all 200ms ease-out;
+        -o-transition:      all 200ms ease-out;
+        transition:         all 200ms ease-out;
+    }
+    canvas:hover {
+        filter: grayscale(0);
+    }
 }
