@@ -1,0 +1,8 @@
+<section>
+    <h4>{{ bundle.title }}</h4>
+    {% include "templates/components/inbox/email-action-bar.html" %}
+    {% for thread_id in bundle.threads %}
+        {% set thread=get_threads()[thread_id] %}
+        {% include "templates/components/inbox/thread.html" %}
+    {% endfor %}
+</section>

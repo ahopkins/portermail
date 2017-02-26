@@ -1,0 +1,18 @@
+<div class="overview">
+    <ul class="participants">
+        <h4>Participants</h4>
+        <li><img src="http://lorempixel.com/40/40/people/1" class="avatar small"></li>
+        <li><img src="http://lorempixel.com/40/40/people/2" class="avatar small"></li>
+    </ul>
+    <ul class="conversation">
+        <h4>Conversation</h4>
+        {% for message in thread.messages %}
+            <li>
+                <a href="#">
+                    {{ message.from }}
+                    <span data-moment="fromNow" data-datetime="{{ message.sent }}"></span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -8,3 +8,6 @@
 
 // Placeholde icon, add class when need to fill space
 i.none { opacity: 0; }
+
+// Move notification wrapper up
+.notification-wrapper { z-index: 1001; }

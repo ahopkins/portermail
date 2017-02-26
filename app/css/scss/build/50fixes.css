@@ -6,4 +6,7 @@
 i.none {
   opacity: 0; }
 
+.notification-wrapper {
+  z-index: 1001; }
+
 /*# sourceMappingURL=50fixes.css.map */

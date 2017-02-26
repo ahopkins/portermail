@@ -1,9 +1,13 @@
 <div class="email-list">
-    <section>
+
+    {% for bundle in get_bundles() %}
+        {% include "templates/components/inbox/bundle.html" %}
+    {% endfor %}
+    {# <section>
         <h4>Today</h4>
         {% include "templates/components/inbox/email-action-bar.html" %}
-        <div class="email-wrapper new unread" id="email-1">
-            <div class="email-display">
+        <div class="email-wrapper new unread" id="email-1" data-click="openEmail">
+            <div class="email-display toggler" data-target="email-1" data-class="opened">
                 <div class="status">
                     <div class="envelope toggler new" data-target="email-1" data-class="unread read">
                         <div class="flap"></div>
@@ -135,5 +139,5 @@
                 Here goes the inner details
             </div>
         </div>
-    </section>
+    </section> #}
 </div>

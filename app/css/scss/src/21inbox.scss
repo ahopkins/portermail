@@ -104,7 +104,7 @@ $name-width: 240px;
 
     .email-wrapper {
         $eb: 4px;
-        padding: $height/1.5 1rem;
+        padding: 0;
         border-style: solid;
         border-width: 1px 1px 0 1px;
         border-color: $near-white;
@@ -135,14 +135,18 @@ $name-width: 240px;
             }
         }
 
-        &.selected,
-        &:hover {
-            box-shadow: inset 0 0 0 2px $dark-grey;
+        &.selected {
+        // &:hover {
+            box-shadow: inset 0 0 0 2px $light-primary;
         }
 
         &:hover {
             .actions a {
                 color: $light-grey;
+            }
+
+            .text p::after {
+                opacity: 1;
             }
         }
     }
@@ -150,6 +154,7 @@ $name-width: 240px;
     .email-display {
         display: flex;
         flex-direction: row;
+        padding: $height/1.2 1rem;
 
         .status {
             font-size: $height;
@@ -186,20 +191,55 @@ $name-width: 240px;
         }
 
         .text {
+            position: relative;
             line-height: $height;
             padding: 0 1rem;
             // overflow: hidden;
             flex-grow: 1;
             // background-color: green;
             p {
+                display: inline-block;
                 margin: 0;
+                position: relative;
+                z-index: 4;
+
+                // -webkit-text-stroke: -1px $white;
+   // color: white;
+               text-shadow:
+                   1px 1px 0 $white,
+                 -1px -1px 0 $white,
+                  1px -1px 0 $white,
+                  -1px 1px 0 $white,
+                   1px 1px 0 $white;
 //                 display: flex;
 // ;                // max-width: 37%;
 //                 overflow: hidden;
 //                 // white-space: nowrap;
 //                 text-overflow: ellipsis;
 //                 // display: none;
+
+                &::after {
+                    opacity: 0;
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    border-bottom: 1px solid $dark-grey;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $white;
+                    z-index: -1;
+                    bottom: 0.8em;
+
+                }
+
             }
+            // &:hover p {
+            //     color: $primary;
+
+            //     &::after {
+            //         border-;
+            //     }
+            // }
         }
 
         .date {
@@ -224,6 +264,91 @@ $name-width: 240px;
 
     .email-details {
         display: none;
+
+        .overview {
+            min-width: 240px;
+            padding: 0 1rem;
+        }
+
+        .participants li {
+            display: inline-block;
+            margin-right: -15px;
+
+            &:first-of-type {
+                margin-left: 1rem;
+            }
+        }
+
+        .conversation a {
+            display: block;
+            padding: 0.4rem 1rem;
+            font-weight: 300;
+
+            &.active {
+                box-shadow: -4px 0 0 0 $grey;
+            }
+
+            &::before {
+                content: "From: ";
+                color: $light-grey;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+            }
+
+            &:hover {
+                box-shadow: -4px 0 0 0 $orange;
+            }
+
+            span {
+                display: block;
+                color: $dark-grey;
+                font-size: 0.9rem;
+            }
+        }
+
+        .current-message {
+            font-weight: 400;
+            line-height: 145%;
+            font-size: 1.4rem;
+            flex-grow: 1;
+        }
+
+        .details {
+            display: flex;
+
+            li {
+                color: $primary;
+                margin: 1rem;
+
+                &::before {
+                    color: $light-grey;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-size: 0.8em;
+                }
+                &.from::before {
+                    content: "From: ";
+                }
+                &.to::before {
+                    content: "to: ";
+                }
+            }
+        }
+
+        .text span[data-moment] {
+            font-weight: 700;
+            display: block;
+            color: $dark-grey;
+            font-size: 0.9em;
+        }
+    }
+
+    .email-wrapper.opened {
+        .email-details {
+            display: flex;
+            max-width: 1050px;
+        }
     }
 
 }

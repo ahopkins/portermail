@@ -9,3 +9,13 @@
 .toggler { cursor: pointer; }
 
 .vertical-align-middle { vertical-align: middle; }
+
+.avatar {
+    border-radius: 50%;
+
+    $small: 40px;
+    &.small {
+        width: $small;
+        height: $small;
+    }
+}

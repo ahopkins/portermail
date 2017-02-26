@@ -2,11 +2,16 @@
   display: flex;
   justify-content: space-between; }
   .portermail .main-nav ul {
-    flex: 1; }
+    flex: 1;
+    padding: 1rem; }
     .portermail .main-nav ul.actions {
       text-align: right; }
     .portermail .main-nav ul li {
       display: inline-block; }
+      .portermail .main-nav ul li:not(:last-of-type)::after {
+        content: '|';
+        display: inline-block;
+        margin: 0 0.4rem; }
 .portermail .places {
   margin: 0;
   display: flex;
@@ -26,6 +31,8 @@
     .portermail aside li a:hover {
       background-color: #FD5B03;
       color: #f0f0f0; }
+      .portermail aside li a:hover::after {
+        background-color: #e55202; }
 .portermail .tags {
   margin-top: 30px;
   display: flex;

@@ -54,7 +54,7 @@
     .portermail .email-list .unread .envelope {
       background-color: rgba(0, 0, 0, 0.1); }
 .portermail .email-wrapper {
-  padding: 23.33333px 1rem;
+  padding: 0;
   border-style: solid;
   border-width: 1px 1px 0 1px;
   border-color: #f0f0f0; }
@@ -70,13 +70,16 @@
       line-height: 0.8rem;
       background-color: #f0f0f0;
       padding: 3px; }
-  .portermail .email-wrapper.selected, .portermail .email-wrapper:hover {
-    box-shadow: inset 0 0 0 2px #424242; }
+  .portermail .email-wrapper.selected {
+    box-shadow: inset 0 0 0 2px #febe9b; }
   .portermail .email-wrapper:hover .actions a {
     color: #bdbdbd; }
+  .portermail .email-wrapper:hover .text p::after {
+    opacity: 1; }
 .portermail .email-display {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  padding: 29.16667px 1rem; }
   .portermail .email-display .status {
     font-size: 35px; }
     .portermail .email-display .status .p-action {
@@ -100,11 +103,27 @@
       top: 1em;
       right: 0; }
   .portermail .email-display .text {
+    position: relative;
     line-height: 35px;
     padding: 0 1rem;
     flex-grow: 1; }
     .portermail .email-display .text p {
-      margin: 0; }
+      display: inline-block;
+      margin: 0;
+      position: relative;
+      z-index: 4;
+      text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
+      .portermail .email-display .text p::after {
+        opacity: 0;
+        content: '';
+        position: absolute;
+        display: block;
+        border-bottom: 1px solid #424242;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        z-index: -1;
+        bottom: 0.8em; }
   .portermail .email-display .date {
     flex-grow: 0;
     padding: 0 1rem; }
@@ -117,5 +136,58 @@
       color: #FD5B03 !important; }
 .portermail .email-details {
   display: none; }
+  .portermail .email-details .overview {
+    min-width: 240px;
+    padding: 0 1rem; }
+  .portermail .email-details .participants li {
+    display: inline-block;
+    margin-right: -15px; }
+    .portermail .email-details .participants li:first-of-type {
+      margin-left: 1rem; }
+  .portermail .email-details .conversation a {
+    display: block;
+    padding: 0.4rem 1rem;
+    font-weight: 300; }
+    .portermail .email-details .conversation a.active {
+      box-shadow: -4px 0 0 0 #757575; }
+    .portermail .email-details .conversation a::before {
+      content: "From: ";
+      color: #bdbdbd;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.8rem; }
+    .portermail .email-details .conversation a:hover {
+      box-shadow: -4px 0 0 0 #FD5B03; }
+    .portermail .email-details .conversation a span {
+      display: block;
+      color: #424242;
+      font-size: 0.9rem; }
+  .portermail .email-details .current-message {
+    font-weight: 400;
+    line-height: 145%;
+    font-size: 1.4rem;
+    flex-grow: 1; }
+  .portermail .email-details .details {
+    display: flex; }
+    .portermail .email-details .details li {
+      color: #FD5B03;
+      margin: 1rem; }
+      .portermail .email-details .details li::before {
+        color: #bdbdbd;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 0.8em; }
+      .portermail .email-details .details li.from::before {
+        content: "From: "; }
+      .portermail .email-details .details li.to::before {
+        content: "to: "; }
+  .portermail .email-details .text span[data-moment] {
+    font-weight: 700;
+    display: block;
+    color: #424242;
+    font-size: 0.9em; }
+.portermail .email-wrapper.opened .email-details {
+  display: flex;
+  max-width: 1050px; }
 
 /*# sourceMappingURL=21inbox.css.map */

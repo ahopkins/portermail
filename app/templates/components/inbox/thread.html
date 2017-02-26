@@ -1,0 +1,31 @@
+<div class="email-wrapper {% if thread.is_read %}read{% else %}unread{% endif %}{% if thread.is_new %} new{% endif %}" id="email-{{ thread.id }}">
+    <div class="email-display">
+        <div class="status">
+            <div class="envelope toggler" data-target="email-{{ thread.id }}" data-class="unread read">
+                <div class="flap"></div>
+            </div>
+            <i class="p-{% if thread.status == "informational" %}information{% elif thread.status == "actionable" %}action{% else %}circle{% endif %}"></i>
+        </div>
+        <div class="name badge" data-badge="4">
+            {{ thread.author }}
+        </div>
+        <div class="text toggler" data-target="email-{{ thread.id }}" data-class="opened" data-hash="thread/{{ thread.id }}" data-click="threadClick">
+            <p>{{ thread.subject }}</p>
+        </div>
+        <div class="date">
+        {# {{ thread.last_sent }} #}
+            <span data-moment="fromNow" data-datetime="{{ thread.last_sent }}"></span>
+        </div>
+        <div class="actions">
+            <a href="#"><i class="p-snooze"></i></a>
+        </div>
+        <div class="checker">
+            <input type="checkbox" id="select-{{ thread.id }}">
+            <label for="select-{{ thread.id }}" class="ignore-toggle"></label>
+        </div>
+    </div>
+    <div class="email-details">
+        {% include "templates/components/inbox/thread-overview.html" %}
+        {% include "templates/components/inbox/thread-current-message.html" %}
+    </div>
+</div>

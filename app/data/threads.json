@@ -1,0 +1,22 @@
+{
+    "acs7sdc786sdv0": {
+        "id": "acs7sdc786sdv0",
+        "is_read": false,
+        "is_done": false,
+        "is_new": true,
+        "status": "actionable",
+        "author": "Jane Doe",
+        "count": 2,
+        "subject": "Vivamus magna justo, lacinia eget consectetur sed",
+        "last_sent": "2017-02-13 00:45:10.934939",
+        "messages": [
+            {
+                "to": "John Doe <john@doe.com>",
+                "from": "Samuel Adams <samadams@bostontea.com>",
+                "text": "Carbon fluidity sensory RAF network tiger-team otaku construct sentient neon sub-orbital. Monofilament cartel paranoid order-flow car marketing nodality geodesic military-grade numinous denim 3D-printed tower math-market. Stimulate camera gang sentient fluidity human modem man j-pop alcohol cardboard rain fetishism network. Refrigerator tiger-team kanji pre-girl receding plastic physical geodesic RAF pistol nodality engine film apophenia. City camera spook Legba sprawl military-grade youtube rebar wonton soup pistol nano-j-pop human. BASE jump disposable drugs urban knife grenade receding engine spook market plastic marketing hacker nano-shoes paranoid. Tank-traps paranoid man car engine sensory 3D-printed pre-modem advert. Boat silent monofilament savant sensory fluidity man bridge chrome jeans nano-franchise lights. ",
+                "is_read": false,
+                "sent": "2017-02-13 00:45:10.934939"
+            }
+        ]
+    }
+}

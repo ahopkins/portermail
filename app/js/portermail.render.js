@@ -2,6 +2,9 @@
 var app = nunjucks.render('/templates/layouts/base.html');
 p.one('.portermail').innerHTML = app;
 
+// Load mail bundles
+getMail();
+
 // On path change, update active link menu
 p.events.add('pushPath', function () {
     var links = p.all('.places a');

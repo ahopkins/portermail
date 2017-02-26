@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAEA,aAAc;EACV,GAAG,EAAE,GAAG;EACR,KAAK,EAAE,KAAK;EACZ,KAAK,ECAI,OAAO;;ADIpB,MAAO;EAAE,OAAO,EAAE,CAAC",
+"mappings": "AAEA,aAAc;EACV,GAAG,EAAE,GAAG;EACR,KAAK,EAAE,KAAK;EACZ,KAAK,ECAI,OAAO;;ADIpB,MAAO;EAAE,OAAO,EAAE,CAAC;;AAGnB,qBAAsB;EAAE,OAAO,EAAE,IAAI",
 "sources": ["../src/50fixes.scss","../src/00colors.scss"],
 "names": [],
 "file": "50fixes.css"

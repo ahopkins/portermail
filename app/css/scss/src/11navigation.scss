@@ -8,6 +8,7 @@
 
         ul {
             flex: 1;
+            padding: 1rem;
 
             &.actions {
                 text-align: right;
@@ -15,6 +16,12 @@
 
             li {
                 display: inline-block;
+
+                &:not(:last-of-type)::after {
+                    content: '|';
+                    display: inline-block;
+                    margin: 0 0.4rem;
+                }
             }
         }
     }
@@ -46,6 +53,10 @@
                 &:hover {
                     background-color: $primary;
                     color: $near-white;
+
+                    &::after {
+                        background-color: darken($primary, 5%);
+                    }
                 }
             }
         }
