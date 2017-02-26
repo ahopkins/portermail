@@ -23,6 +23,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/ahopkins/portermail.git"
   },
+  "readme": "README.rst",
   "keywords": [
     "email-client",
     "javascript",
